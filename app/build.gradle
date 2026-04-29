@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace 'com.gpaymonitor'
-    compileSdk 34
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.gpaymonitor"
         minSdk 26
-        targetSdk 34
+        targetSdk 31
         versionCode 1
         versionName "1.0"
     }
@@ -38,10 +38,9 @@ android {
 }
 
 dependencies {
-    // Firebase BOM — manages all Firebase library versions
-    implementation platform('com.google.firebase:firebase-bom:32.7.0')
-    implementation 'com.google.firebase:firebase-auth-ktx'
-    implementation 'com.google.firebase:firebase-firestore-ktx'
+    // Firebase
+    implementation 'com.google.firebase:firebase-auth-ktx:22.3.0'
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.10.0'
 
     // AndroidX
     implementation 'androidx.core:core-ktx:1.12.0'
