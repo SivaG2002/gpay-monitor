@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "743914719027",
+    "project_id": "upialert-8d0ed",
+    "storage_bucket": "upialert-8d0ed.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743914719027:android:addd730bdfd00ff545a046",
+        "android_client_info": {
+          "package_name": "com.gpaymonitor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3QDqVTqBLLzGcWjgbaoBOoDBmOBjBH5w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="32dp">
+
+        <!-- App logo / title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💳 GPay Monitor"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="48dp"/>
+
+        <!-- ============================================================
+             LOGIN SCREEN
+             ============================================================ -->
+        <LinearLayout
+            android:id="@+id/layoutLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign in with your email"
+                android:textSize="18sp"
+                android:textColor="@color/on_surface"
+                android:layout_marginBottom="24dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email address"
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionSend"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSendLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Send Sign-in Link"
+                android:textAllCaps="false"
+                android:padding="14dp"/>
+
+        </LinearLayout>
+
+        <!-- ============================================================
+             LINK SENT SCREEN
+             ============================================================ -->
+        <LinearLayout
+            android:id="@+id/layoutLinkSent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📧"
+                android:textSize="64sp"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:id="@+id/tvLinkSentMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="@color/on_surface"
+                android:lineSpacingMultiplier="1.4"/>
+
+        </LinearLayout>
+
+        <!-- ============================================================
+             HOME SCREEN
+             ============================================================ -->
+        <LinearLayout
+            android:id="@+id/layoutHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvUserEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/on_surface"
+                android:layout_marginBottom="32dp"/>
+
+            <!-- Permission status card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Notification Access"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/on_surface"
+                        android:layout_marginBottom="8dp"/>
+
+                    <TextView
+                        android:id="@+id/tvPermissionStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/on_surface"
+                        android:layout_marginBottom="12dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnGrantPermission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Grant Permission"
+                        android:textAllCaps="false"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Out"
+                android:textAllCaps="false"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_marginTop="24dp"/>
+
+        </LinearLayout>
+
+        <!-- Global progress bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</ScrollView>
